@@ -5,8 +5,6 @@ const prices = {
 };
 let quantityInput, productSelect, resultDiv, calculateBtn;
 function calculate(event) {
-    if (event) event.preventDefault();
-
     const quantity = Number(quantityInput.value);
     const selectedProduct = productSelect.value;
     const price = prices[selectedProduct];
@@ -34,4 +32,5 @@ window.addEventListener('DOMContentLoaded', function () {
     calculateBtn.addEventListener("click", calculate);
     myButton.addEventListener("click", onClick);
 });
+
 
