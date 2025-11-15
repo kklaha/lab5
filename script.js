@@ -9,7 +9,7 @@ function calculate(event) {
     const selectedProduct = productSelect.value;
     const price = prices[selectedProduct];
     if (isNaN(quantity) || quantity < 1) {
-        resultDiv.textContent = "Введите корректное количество!";
+        resultDiv.textContent = "Введите натуральное количество!";
         return;
     }
     const totalCost = price * quantity;
@@ -32,5 +32,6 @@ window.addEventListener('DOMContentLoaded', function () {
     calculateBtn.addEventListener("click", calculate);
     myButton.addEventListener("click", onClick);
 });
+
 
 
