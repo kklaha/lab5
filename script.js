@@ -11,13 +11,13 @@ function calculate(event) {
     const selectedProduct = productSelect.value;
     const price = prices[selectedProduct];
     if (isNaN(quantity) || quantity < 1) {
-        resultDiv.textContent = "❌ Введите корректное количество!";
+        resultDiv.textContent = "Введите корректное количество!";
         return;
     }
     const totalCost = price * quantity;
     resultDiv.innerHTML = `
-        🛒 Заказ: <strong>${quantity} шт.</strong><br>
-        💰 Итого: <strong>${totalCost.toLocaleString()} руб.</strong>
+        Заказ: <strong>${quantity} шт.</strong><br>
+        Итого: <strong>${totalCost.toLocaleString()} руб.</strong>
     `;
 }
 function onClick(event) {
@@ -34,3 +34,4 @@ window.addEventListener('DOMContentLoaded', function () {
     calculateBtn.addEventListener("click", calculate);
     myButton.addEventListener("click", onClick);
 });
+
